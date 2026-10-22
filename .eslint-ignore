@@ -62,5 +62,6 @@
 src/vs/base/common/lit-html/**
 src/vs/base/common/signals-core/**
 
-# Zero Code: generated screens bundle (ZERO_TOUCHPOINTS.md)
+# Zero Code: generated bundles from the monorepo (ZERO_TOUCHPOINTS.md)
 src/vs/workbench/contrib/zeroAgents/browser/media/screens/**
+src/vs/platform/zeroAgents/node/vendor/**

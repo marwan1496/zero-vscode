@@ -17,6 +17,7 @@ export const enum ZeroCommandId {
 	NewRun = 'zero.newRun',
 	OpenMissionControl = 'zero.openMissionControl',
 	RescanAgents = 'zero.rescanAgents',
+	RestartEngine = 'zero.restartEngine',
 }
 
 export const ZeroContextKeys = {

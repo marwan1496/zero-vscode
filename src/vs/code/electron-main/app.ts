@@ -129,6 +129,8 @@ import { ILoggerMainService } from '../../platform/log/electron-main/loggerServi
 import { IInitialProtocolUrls, IProtocolUrl } from '../../platform/url/electron-main/url.js';
 import { IUtilityProcessWorkerMainService, UtilityProcessWorkerMainService } from '../../platform/utilityProcess/electron-main/utilityProcessWorkerMainService.js';
 import { ipcUtilityProcessWorkerChannelName } from '../../platform/utilityProcess/common/utilityProcessWorkerService.js';
+import { IZeroAgentsMainService, ZeroAgentsMainChannelName } from '../../platform/zeroAgents/common/zeroAgents.js';
+import { ZeroAgentsMainService } from '../../platform/zeroAgents/electron-main/zeroAgentsMainService.js';
 import { ILocalPtyService, LocalReconnectConstants, TerminalIpcChannels, TerminalSettingId } from '../../platform/terminal/common/terminal.js';
 import { createLocalPtyChannel } from '../../platform/terminal/common/localPtyChannel.js';
 import { ElectronPtyHostStarter } from '../../platform/terminal/electron-main/electronPtyHostStarter.js';
@@ -1349,6 +1351,9 @@ export class CodeApplication extends Disposable {
 		// Utility Process Worker
 		services.set(IUtilityProcessWorkerMainService, new SyncDescriptor(UtilityProcessWorkerMainService, undefined, true));
 
+		// Zero Code engine host (ZERO_TOUCHPOINTS.md #2)
+		services.set(IZeroAgentsMainService, new SyncDescriptor(ZeroAgentsMainService, undefined, true));
+
 		// Proxy Auth
 		services.set(IProxyAuthService, new SyncDescriptor(ProxyAuthService));
 
@@ -1523,6 +1528,9 @@ export class CodeApplication extends Disposable {
 		// Utility Process Worker
 		const utilityProcessWorkerChannel = ProxyChannel.fromService(accessor.get(IUtilityProcessWorkerMainService), disposables);
 		mainProcessElectronServer.registerChannel(ipcUtilityProcessWorkerChannelName, utilityProcessWorkerChannel);
+
+		// Zero Code engine host (ZERO_TOUCHPOINTS.md #2)
+		mainProcessElectronServer.registerChannel(ZeroAgentsMainChannelName, ProxyChannel.fromService(accessor.get(IZeroAgentsMainService), disposables));
 	}
 
 	private async openFirstWindow(accessor: ServicesAccessor, initialProtocolUrls: IInitialProtocolUrls | undefined): Promise<ICodeWindow[]> {

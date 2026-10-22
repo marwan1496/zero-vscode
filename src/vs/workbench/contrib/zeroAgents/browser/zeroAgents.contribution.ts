@@ -18,7 +18,7 @@ import { ZeroStatusBarContribution } from './statusBar.js';
 import { registerZeroViews } from './views/zeroViews.js';
 
 // Zero Code: the agent system built into the workbench (docs/08-WORKBENCH-UI.md).
-// Imported once from workbench.desktop.main.ts (touch point 1, see ZERO_TOUCHPOINTS.md).
+// Loaded by ../electron-browser/zeroAgents.contribution.ts, which adds the engine host connection.
 
 registerZeroViews();
 registerZeroActions();

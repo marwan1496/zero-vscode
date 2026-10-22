@@ -13,6 +13,13 @@ export interface PingResult {
 	readonly protocolVersion: number;
 }
 
+/** Placeholder shape; Task 1.5 replaces it with the DetectedAgent schema from docs/04-SCHEMAS.md. */
+export interface DetectedAgentDto {
+	readonly id: string;
+	readonly name: string;
+	readonly status: 'ready' | 'not_logged_in' | 'not_installed';
+}
+
 /** The rich screens rendered in workbench webview editors (docs/08-WORKBENCH-UI.md). */
 export type ScreenId = 'missionControl' | 'plan' | 'feature' | 'agentsModels';
 

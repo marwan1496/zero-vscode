@@ -216,7 +216,7 @@ import './contrib/keybindingsExport/electron-browser/keybindingsExport.contribut
 import './contrib/keybindings/electron-browser/systemWideKeybindings.contribution.js';
 
 // Zero Code (ZERO_TOUCHPOINTS.md #1)
-import './contrib/zeroAgents/browser/zeroAgents.contribution.js';
+import './contrib/zeroAgents/electron-browser/zeroAgents.contribution.js';
 
 //#endregion
 
