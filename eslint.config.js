@@ -150,6 +150,22 @@ export default defineConfig(
 			]
 		},
 	},
+	// Zero Code: own copyright header for Zero sources (ZERO_TOUCHPOINTS.md)
+	{
+		files: ['src/vs/**/zeroAgents/**/*.ts', 'test/smoke/src/areas/zero/**/*.ts'],
+		rules: {
+			'header/header': [
+				2,
+				'block',
+				[
+					'---------------------------------------------------------------------------------------------',
+					' *  Copyright (c) Zero Code Editor contributors.',
+					' *  Licensed under the MIT License. See License.txt in the project root for license information.',
+					' *--------------------------------------------------------------------------------------------'
+				]
+			]
+		},
+	},
 	// Disallow bracket notation for property names that can use dot notation.
 	{
 		files: [

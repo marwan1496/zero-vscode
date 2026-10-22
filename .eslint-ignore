@@ -61,3 +61,6 @@
 # Vendored third-party libraries
 src/vs/base/common/lit-html/**
 src/vs/base/common/signals-core/**
+
+# Zero Code: generated screens bundle (ZERO_TOUCHPOINTS.md)
+src/vs/workbench/contrib/zeroAgents/browser/media/screens/**

@@ -74,6 +74,9 @@ export const unicodeFilter = Object.freeze<string[]>([
 	'!src/vs/workbench/services/keybinding/browser/keyboardLayouts/**',
 	'!src/vs/workbench/contrib/terminal/common/scripts/psreadline/**',
 
+	// Zero Code: generated screens bundle (ZERO_TOUCHPOINTS.md)
+	'!src/vs/workbench/contrib/zeroAgents/browser/media/screens/**',
+
 	// Files with licences
 	'!src/vs/platform/endpoint/common/licenseAgreement.ts',
 ]);
@@ -169,6 +172,9 @@ export const indentationFilter = Object.freeze<string[]>([
 	'!extensions/ipynb/notebook-out/**',
 	'!extensions/notebook-renderers/renderer-out/*.js',
 	'!extensions/simple-browser/media/*.js',
+
+	// Zero Code: generated screens bundle (ZERO_TOUCHPOINTS.md)
+	'!src/vs/workbench/contrib/zeroAgents/browser/media/screens/**',
 ]);
 
 export const copyrightFilter = Object.freeze<string[]>([
@@ -228,6 +234,10 @@ export const copyrightFilter = Object.freeze<string[]>([
 
 	// extensions/copilot has its own code style
 	'!extensions/copilot/**',
+
+	// Zero Code: own copyright header, enforced by eslint (ZERO_TOUCHPOINTS.md)
+	'!src/vs/**/zeroAgents/**',
+	'!test/smoke/src/areas/zero/**',
 ]);
 
 export const tsFormattingFilter = Object.freeze<string[]>([
