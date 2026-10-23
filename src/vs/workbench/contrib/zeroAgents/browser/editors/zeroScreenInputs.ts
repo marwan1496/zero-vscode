@@ -9,7 +9,7 @@ import { localize } from '../../../../../nls.js';
 import { EditorInputCapabilities, IUntypedEditorInput } from '../../../../common/editor.js';
 import { EditorInput } from '../../../../common/editor/editorInput.js';
 import { ScreenId } from '../../../../../platform/zeroAgents/common/zeroProtocol.js';
-import { zeroViewIcon } from '../zeroIcons.js';
+import { zeroViewIcon } from '../../common/zeroIcons.js';
 
 export const ZERO_SCREEN_SCHEME = 'zero-screen';
 

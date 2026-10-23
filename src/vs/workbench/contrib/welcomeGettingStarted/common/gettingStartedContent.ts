@@ -14,6 +14,7 @@ import { NotebookSetting } from '../../notebook/common/notebookCommon.js';
 import { CONTEXT_ACCESSIBILITY_MODE_ENABLED } from '../../../../platform/accessibility/common/accessibility.js';
 import { URI } from '../../../../base/common/uri.js';
 import product from '../../../../platform/product/common/product.js';
+import { zeroWalkthrough } from '../../zeroAgents/common/zeroWalkthrough.js'; // Zero Code (ZERO_TOUCHPOINTS.md #6)
 
 interface IGettingStartedContentProvider {
 	(): string;
@@ -250,6 +251,7 @@ function createCopilotSetupStep(id: string, button: string, when: string, includ
 }
 
 export const walkthroughs: GettingStartedWalkthroughContent = [
+	zeroWalkthrough, // Zero Code (ZERO_TOUCHPOINTS.md #6): first = featured and opened on first start
 	{
 		id: 'Setup',
 		title: localize('gettingStarted.setup.title', "Get started with VS Code"),

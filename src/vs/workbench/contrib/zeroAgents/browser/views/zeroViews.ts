@@ -19,7 +19,7 @@ import { ViewPaneContainer } from '../../../../browser/parts/views/viewPaneConta
 import { IViewletViewOptions } from '../../../../browser/parts/views/viewsViewlet.js';
 import { Extensions, IViewContainersRegistry, IViewDescriptorService, IViewsRegistry, ViewContainerLocation } from '../../../../common/views.js';
 import { ZERO_AGENTS_VIEW_ID, ZERO_RUN_VIEW_ID, ZERO_VIEW_CONTAINER_ID, ZeroCommandId } from '../../common/zeroAgents.js';
-import { zeroViewIcon } from '../zeroIcons.js';
+import { zeroViewIcon } from '../../common/zeroIcons.js';
 
 /** Shows the active run as a tree (Task 2.4). Until then: welcome content only. */
 export class ZeroRunView extends ViewPane {

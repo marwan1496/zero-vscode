@@ -94,9 +94,26 @@ class RestartEngineAction extends Action2 {
 	}
 }
 
+class OpenAgentsAndModelsAction extends Action2 {
+	constructor() {
+		super({
+			id: ZeroCommandId.OpenAgentsAndModels,
+			title: localize2('zero.openAgentsAndModels', "Agents and Models"),
+			category,
+			f1: true,
+		});
+	}
+
+	// The Agents and Models screen arrives in Task 3.2.
+	async run(accessor: ServicesAccessor): Promise<void> {
+		accessor.get(INotificationService).info(localize('zero.openAgentsAndModels.notYet', "The Agents and Models screen is not available yet."));
+	}
+}
+
 export function registerZeroActions(): void {
 	registerAction2(NewRunAction);
 	registerAction2(OpenMissionControlAction);
 	registerAction2(RescanAgentsAction);
 	registerAction2(RestartEngineAction);
+	registerAction2(OpenAgentsAndModelsAction);
 }
