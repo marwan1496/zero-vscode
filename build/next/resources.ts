@@ -77,6 +77,10 @@ const desktopResourcePatterns = [
 	// Sessions - built-in prompts and skills
 	'vs/sessions/prompts/*.prompt.md',
 	'vs/sessions/skills/**/SKILL.md',
+
+	// Zero Code: screens bundle and engine bundle (ZERO_TOUCHPOINTS.md #3)
+	'vs/workbench/contrib/zeroAgents/browser/media/screens/*.{js,css}',
+	'vs/platform/zeroAgents/node/vendor/*.mjs',
 ];
 
 // Resources for server target (minimal - no UI)

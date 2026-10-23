@@ -108,6 +108,7 @@ const desktopEntryPoints = [
 	'vs/platform/agentHost/node/agentHostMain',
 	'vs/platform/agentHost/node/diffWorkerMain',
 	'vs/workbench/api/node/extensionHostProcess',
+	'vs/platform/zeroAgents/node/zeroEngineHostMain', // Zero Code (ZERO_TOUCHPOINTS.md #3)
 ];
 
 const codeEntryPoints = [
